@@ -2,6 +2,7 @@ import { API } from "../../assets/api/api"
 import { CharacterType, ResponseType } from "../../assets/api/rick-and-morty-api"
 import { CharacterCard } from "../../components/Card/CharacterCard/CharacterCard"
 import { Header } from "../../components/Header/Header"
+import { getLayout } from "../../components/Layout/BaseLayout"
 import { PageWrapper } from "../../components/PageWrapper/PageWrapper"
 
 export const getStaticProps = async () => {
@@ -25,9 +26,9 @@ const Characters = (props: PropsType) => {
     ))
     return (
         <PageWrapper>
-        <Header/>
         {charactersList}
     </PageWrapper>
     )
 }
+Characters.getLayout=getLayout
 export default Characters

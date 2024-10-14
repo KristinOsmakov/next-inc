@@ -4,6 +4,7 @@ import { CharacterType, EpisodeType, LocationType, ResponseType } from "../../as
 import { Header } from "../../components/Header/Header"
 import { PageWrapper } from "../../components/PageWrapper/PageWrapper"
 import { Card } from "../../components/Card/Card"
+import { getLayout } from "../../components/Layout/BaseLayout"
 
 // export const getServerSideProps = async () => {
    
@@ -37,9 +38,10 @@ const Locations = () => {
     ))
     return (
         <PageWrapper>
-        <Header/>
         {locationsList}
     </PageWrapper>
     )
 }
+
+Locations.getLayout=getLayout
 export default Locations

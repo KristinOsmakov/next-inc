@@ -6,7 +6,6 @@ import { getLayout } from '../components/Layout/BaseLayout';
 
 const Home: NextPageWithLayout = () => (
     <PageWrapper>
-        <Header/>
         <Image
             src="/next.svg"
             alt="Next.js Logo"
