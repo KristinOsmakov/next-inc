@@ -3,6 +3,7 @@ import { API } from "../../assets/api/api"
 import { CharacterType, EpisodeType, LocationType, ResponseType } from "../../assets/api/rick-and-morty-api"
 import { Header } from "../../components/Header/Header"
 import { PageWrapper } from "../../components/PageWrapper/PageWrapper"
+import { Card } from "../../components/Card/Card"
 
 // export const getServerSideProps = async () => {
    
@@ -32,7 +33,7 @@ const Locations = () => {
    if(!locations) return null
    
     const locationsList = locations.results.map(location => (
-        <div key={location.id}>{location.name}</div>
+        <Card key={location.id} name={location.name}/>
     ))
     return (
         <PageWrapper>
