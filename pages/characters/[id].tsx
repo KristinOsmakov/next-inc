@@ -51,14 +51,41 @@ const Character = (props: PropsType) => {
     
     return (
         <PageWrapper>
-            <IdText>ID: {characterId}</IdText>
-            <CharacterCard key={character.id} character={character}/>
-            <button onClick={goToCharacters}>GO TO CHARACTERS</button>
+            <Container>
+                <IdText>ID: {characterId}</IdText>
+                <CharacterCard key={character.id} character={character}/>
+                <Button onClick={goToCharacters}>GO TO CHARACTERS</Button>
+            </Container>
         </PageWrapper>
     )
 }
 Character.getLayout=getLayout
 export default Character
+
+
+
+
+const Button = styled.button`
+    width: 330px;
+    height: 60px;
+    border-radius: 4px;
+    border: none;
+    background: #facaff;
+
+
+    &:hover {
+        background: #fa52d3;
+        color: white;
+    }
+`
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px
+`
+
 const IdText = styled.div`
     font-size: 38px;
 `
